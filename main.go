@@ -23,7 +23,7 @@ func main() {
 	{
 		userGroup.POST("/signup", controllers.Signup)
 		userGroup.POST("/signin", controllers.Signin)
-		userGroup.Use(middlewares.AuthMiddleware()) // Protect the following routes
+		userGroup.Use(middlewares.AuthMiddleware())
 		userGroup.GET("/users", controllers.GetUsers)
 	}
 
